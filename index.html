@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Proposal Kemitraan Digital VIP | Khusus UMKM SMESTA</title>
+    <meta name="description" content="Proposal eksklusif pembuatan aset digital website korporat dan publikasi media nasional untuk UMKM unggulan SMESTA.">
+    
+    <style>
+        :root {
+            --primary: #0a3d62; /* Corporate Navy */
+            --gold: #d4af37; /* Luxury Gold */
+            --light: #f8f9fa;
+            --dark: #2f3640;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 1);
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            color: var(--dark);
+            margin: 0; padding: 0; line-height: 1.6;
+        }
+
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+
+        /* GLASS CARD UTAMA */
+        .proposal-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+        }
+
+        /* HEADER */
+        .header { text-align: center; border-bottom: 2px dashed #dcdde1; padding-bottom: 30px; margin-bottom: 30px; }
+        .badge-vip { background: linear-gradient(135deg, var(--gold), #b8942b); color: #fff; padding: 8px 20px; border-radius: 30px; font-weight: bold; font-size: 14px; letter-spacing: 2px; display: inline-block; margin-bottom: 20px; }
+        .header h1 { color: var(--primary); font-size: 28px; margin: 0 0 10px; font-weight: 800; }
+        .header p { color: #7f8fa6; font-size: 16px; margin: 0; }
+
+        /* KONTEN SURAT */
+        .content p { font-size: 16px; color: #353b48; margin-bottom: 20px; }
+        .highlight { font-weight: bold; color: var(--primary); }
+        .pain-point { background: #ffeaa7; padding: 2px 8px; border-radius: 4px; color: #d35400; font-weight: bold; }
+
+        /* FITUR & BONUS BOX */
+        .feature-box { background: #fff; border-left: 5px solid var(--primary); padding: 25px; border-radius: 8px; margin: 30px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+        .feature-box h3 { margin: 0 0 15px; color: var(--primary); font-size: 20px; }
+        .feature-list { list-style: none; padding: 0; margin: 0; }
+        .feature-list li { margin-bottom: 12px; padding-left: 25px; position: relative; font-size: 15px; }
+        .feature-list li::before { content: '✅'; position: absolute; left: 0; top: 0; }
+
+        /* DONGKRAK USAHA BONUS SECTION */
+        .bonus-box { background: linear-gradient(135deg, var(--primary) 0%, #1e3799 100%); color: #fff; padding: 30px; border-radius: 12px; margin: 40px 0; text-align: center; position: relative; overflow: hidden; }
+        .bonus-box::before { content: '🎁'; position: absolute; font-size: 100px; opacity: 0.1; top: -20px; right: -20px; }
+        .bonus-box h3 { color: var(--gold); margin: 0 0 15px; font-size: 22px; }
+        .bonus-box p { font-size: 15px; opacity: 0.9; margin-bottom: 20px; }
+        
+        /* TOMBOL BUKTI LAPORAN (DRIVE) */
+        .proof-btn { display: inline-block; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; margin: 5px; transition: all 0.3s; }
+        .proof-btn:hover { background: #fff; color: var(--primary); }
+
+        /* HARGA MAFIA OFFER */
+        .pricing-box { text-align: center; padding: 30px; border: 2px solid var(--gold); border-radius: 12px; background: #fffbf0; margin-bottom: 40px; }
+        .price-strike { text-decoration: line-through; color: #a4b0be; font-size: 18px; }
+        .price-final { font-size: 36px; font-weight: 900; color: #e15f41; margin: 10px 0; }
+        .price-note { color: #7f8fa6; font-size: 14px; }
+
+        /* PEMBAYARAN */
+        .payment-box { background: #f1f2f6; border-radius: 12px; padding: 30px; text-align: center; margin-bottom: 30px; }
+        .payment-box h4 { margin: 0 0 15px; font-size: 18px; color: var(--dark); }
+        .bank-details { background: #fff; padding: 20px; border-radius: 8px; border: 1px dashed #ced6e0; display: inline-block; text-align: left; }
+        .bank-name { font-size: 20px; font-weight: 800; color: #0066b2; /* BCA Blue */ margin-bottom: 5px; }
+        .bank-rek { font-size: 24px; font-weight: 900; letter-spacing: 2px; color: var(--dark); margin: 5px 0; }
+        .bank-an { font-size: 16px; color: #57606f; }
+
+        /* CTA BUTTON */
+        .cta-btn { display: block; width: 100%; text-align: center; background: #20bf6b; color: #fff; padding: 20px; font-size: 18px; font-weight: bold; border-radius: 50px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 10px 20px rgba(32, 191, 107, 0.3); transition: transform 0.3s; }
+        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(32, 191, 107, 0.4); }
+
+        @media (max-width: 600px) {
+            .proposal-card { padding: 30px 20px; }
+            .header h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="proposal-card">
+        
+        <div class="header">
+            <div class="badge-vip">PROPOSAL EKSKLUSIF B2B</div>
+            <h1>Akselerasi Digital UMKM Ekspor</h1>
+            <p>Kepada Yth. Pimpinan/Direktur Perusahaan Target</p>
+        </div>
+
+        <div class="content">
+            <p>Salam sukses,</p>
+            <p>Kami telah meninjau profil perusahaan Anda di portal <span class="highlight">SMESTA (Kementerian Koperasi dan UKM RI)</span>. Kami sangat mengapresiasi kualitas produk Anda yang telah berstandar ekspor.</p>
+            <p>Namun, kami menemukan satu celah krusial: <span class="pain-point">Ketiadaan Website Korporat Resmi di Mesin Pencari Google.</span></p>
+            <p>Di era digital, 90% <em>buyer</em> B2B berskala nasional maupun internasional akan melakukan verifikasi kredibilitas perusahaan melalui Google sebelum menyepakati kontrak kerja sama. Ketiadaan aset digital sering kali membuat perusahaan dinilai fiktif dan kehilangan potensi omset miliaran rupiah.</p>
+
+            <div class="feature-box">
+                <h3>Solusi Website VIP (Skor Google 100/100)</h3>
+                <p style="font-size: 14px; margin-bottom: 15px; color: #747d8c;">Kami menawarkan pembuatan aset digital kelas atas dengan spesifikasi:</p>
+                <ul class="feature-list">
+                    <li><strong>Aura Glassmorphism Design:</strong> Tampilan mewah ala korporat elit.</li>
+                    <li><strong>Zero-Delay Speed:</strong> Waktu muat (loading) 0,2 detik. Anti-lemot.</li>
+                    <li><strong>SEO White Hat:</strong> Disukai Google, siap bersaing di pencarian.</li>
+                    <li><strong>Domain Resmi:</strong> Penggunaan domain profesional (misal: namapt.com).</li>
+                </ul>
+            </div>
+
+            <div class="bonus-box">
+                <h3>🎁 SUPER BONUS MINGGU INI</h3>
+                <p>Website baru akan sulit ditemukan jika tidak dipromosikan. Khusus deal minggu ini, kami berikan <strong>Gratis 1x Publikasi Artikel Ulasan Premium</strong> di portal media bisnis nasional kami (DongkrakUsaha Group).</p>
+                <p>Website Anda akan langsung mendapat "Suntikan Backlink Tier-1" agar cepat terindeks dan merajai Google.</p>
+                
+                <div style="margin-top: 15px;">
+                    <a href="https://drive.google.com/file/d/1xDH4WdLE1dDHhN3FMQOhyIvszbaYH2Yk/view?usp=sharing" target="_blank" class="proof-btn">📄 Lihat Laporan Artikel Portofolio</a>
+                    <a href="https://drive.google.com/file/d/1RkUTCAF6z3YjEbdnOSPsghCRxo8nrbDe/view?usp=sharing" target="_blank" class="proof-btn">📊 Lihat Analisa Kata Kunci</a>
+                </div>
+            </div>
+
+            <div class="pricing-box">
+                <p style="margin:0; font-weight:bold; color:var(--dark);">INVESTASI ASET DIGITAL TERIMA BERES</p>
+                <div class="price-strike">Normal: Rp 3.500.000,-</div>
+                <div class="price-final">Rp 1.000.000,-</div>
+                <div class="price-note">*(Promo Subsidi Khusus UMKM Terdaftar di SMESTA)*</div>
+            </div>
+
+            <div class="payment-box">
+                <h4>LAKUKAN PEMBAYARAN & KUNCI SLOT</h4>
+                <p style="font-size: 14px; color: #747d8c; margin-bottom: 20px;">Silakan transfer sesuai paket di atas untuk memulai proses perakitan Website dan Drafting Artikel DongkrakUsaha.</p>
+                
+                <div class="bank-details">
+                    <div class="bank-name">Bank BCA</div>
+                    <div class="bank-rek">7655 432 353</div>
+                    <div class="bank-an">A.n: SUTATO</div>
+                </div>
+            </div>
+
+            <a href="https://wa.me/628XXXXXXXXXX?text=Halo%20Redaksi,%20saya%20sudah%20transfer%20Rp%201.000.000%20untuk%20pembuatan%20Website%20VIP%20dan%20Bonus%20Artikel%20DongkrakUsaha.%20Ini%20bukti%20struknya." class="cta-btn">
+                KONFIRMASI & UPLOAD BUKTI TRANSFER ➔
+            </a>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
